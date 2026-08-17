@@ -28,6 +28,11 @@
   "engines": {
     "node": ">=20"
   },
+  "scripts": {
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish"
+  },
   "exports": {
     ".": {
       "types": "./lib/types/index.d.ts",
