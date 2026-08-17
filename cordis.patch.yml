@@ -1,0 +1,5 @@
+# dsh-novel-reader bundle patch
+# 通过 bundle 通道把本插件插入 profile 的 layer stack（与其余 bundle 一致）。
+- insert:
+    - id: novel-reader
+      name: 'dsh-novel-reader'
