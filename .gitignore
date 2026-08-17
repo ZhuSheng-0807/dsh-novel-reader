@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# npm
+*.tgz
+*.log
+npm-debug.log*
+
+# local dsh profile copies / runtime
+.dsh/
+dsh-home/
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# build outputs (not applicable — pure JS, but keep for safety)
+dist/
+out/
+lib/*.map

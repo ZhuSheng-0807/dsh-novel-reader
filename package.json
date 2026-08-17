@@ -1,0 +1,73 @@
+{
+  "name": "dsh-novel-reader",
+  "description": "摸鱼小说阅读器 · 在 DSH Web 里悬浮一个轻量小说阅读面板：可拖动/可缩放，目录分页定位，书架与阅读进度保存，章节预缓存。Dual-half：Host 注册 /novel 路由负责抓取与解析，Client 渲染浮动阅读面板。",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "novel",
+    "reader",
+    "fiction",
+    "小说",
+    "阅读器"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhuSheng-0807/dsh-novel-reader.git"
+  },
+  "homepage": "https://github.com/ZhuSheng-0807/dsh-novel-reader#readme",
+  "bugs": {
+    "url": "https://github.com/ZhuSheng-0807/dsh-novel-reader/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  }
+}
