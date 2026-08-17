@@ -41,6 +41,3 @@ pnpm add file:<this-repo-path>
 ```bash
 npm run publish:patch   # bumps version and publishes to npm
 ```
-
-CI also auto-publishes when a `v*` tag is pushed (requires the `NPM_TOKEN`
-repository secret).
